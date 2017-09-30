@@ -1,0 +1,12 @@
+---
+- name: configure PyPI server for pip
+  template: 
+    src: etc/pip.conf.j2
+    dest: /etc/pip.conf
+
+- name: configure PyPI server for easy_install
+  template: 
+    src: pydistutils.cfg.j2
+    dest: ~/.pydistutils.cfg
+  become_user: "{{ item }}"
+  with_items: "{{ pypi_users }}"

@@ -1,3 +1,13 @@
 ---
-centos_epel_mirror_enabled: false
-centos_base_mirror_enabled: false
+# System repo mirrors
+centos_epel_mirror_enabled: no
+centos_base_mirror_enabled: no
+
+# PyPI mirror
+pypi_mirror_enabled: no
+
+pypi_index_url: https://pypi.python.org/simple
+pypi_search_index: https://pypi.python.org/pypi
+pypi_timeout: 6000
+pypi_trusted_host: ""
+pypi_users: "{{ ansible_ssh_user }}"

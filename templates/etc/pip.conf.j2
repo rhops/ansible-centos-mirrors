@@ -1,0 +1,10 @@
+[global]
+timeout = {{ pypi_timeout }}
+index-url = {{ pypi_index_url }}
+
+{% if pypi_trusted_host is defined and pypi_trusted_host %}
+trusted-host = {{ pypi_trusted_host }}
+{% endif %}
+
+[search]
+index = {{ pypi_search_index }}
