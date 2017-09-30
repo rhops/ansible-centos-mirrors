@@ -1,0 +1,14 @@
+---
+# Install epel repo files from Extra repo.
+# The main purpose of this task is to install the key,
+# So make sure you install this from the trusted source.
+- name: install epel repo
+  yum:
+    name: epel-release
+    state: present
+
+- name: use epel mirror
+  template:
+    src: etc/yum.repos.d/epel.repo.j2
+    dest: /etc/yum.repos.d/epel.repo
+    mode: 0644

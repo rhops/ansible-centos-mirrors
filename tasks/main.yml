@@ -1,0 +1,18 @@
+---
+# Make sure python selinux is installed which is mandatory
+# to run Ansible tasks
+- name: install python selinux dependency
+  yum:
+    name: libselinux-python
+    state: present
+
+- name: configure epel mirror
+  include: epel.yml
+  when: centos_epel_mirror_enabled
+
+- name: use base mirror
+  template:
+    src: etc/yum.repos.d/CentOS-Base.repo.j2
+    dest: /etc/yum.repos.d/CentOS-Base.repo
+    mode: 0644
+  when: centos_base_mirror_enabled

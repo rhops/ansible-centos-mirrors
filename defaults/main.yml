@@ -1,0 +1,3 @@
+---
+centos_epel_mirror_enabled: false
+centos_base_mirror_enabled: false
