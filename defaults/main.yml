@@ -24,7 +24,7 @@ postgresql_repo_enabled: yes
 
 # RabbitMQ repo
 rabbitmq_mirror_enabled: no
-rabbitmq_repo_url: https://dl.bintray.com/rabbitmq/rabbitmq-server-rpm/
+rabbitmq_repo_url: https://dl.bintray.com/rabbitmq/rabbitmq-server-rpm
 rabbitmq_repo_enabled: yes
 rabbitmq_repo_gpgcheck: yes
 
