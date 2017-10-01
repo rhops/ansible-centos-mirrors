@@ -13,9 +13,15 @@ pypi_trusted_host: ""
 pypi_users: "{{ ansible_ssh_user }}"
 
 # PostgreSQL upstream repo
-postgresql_upstream_repo_enable: no
+postgresql_mirror_enabled: no
 postgresql_version: 9.6
 postgresql_short_version: 96
 postgresql_repo_host: https://download.postgresql.org/pub
 postgresql_repo_gpgcheck: yes
 postgresql_repo_enabled: yes
+
+# RabbitMQ repo
+rabbitmq_mirror_enabled: no
+rabbitmq_repo_url: https://dl.bintray.com/rabbitmq/rabbitmq-server-rpm/
+rabbitmq_repo_enabled: yes
+rabbitmq_repo_gpgcheck: yes

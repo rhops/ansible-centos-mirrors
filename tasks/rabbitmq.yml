@@ -1,0 +1,15 @@
+---
+- name: import rabbitmq key
+  rpm_key:
+    state: present
+    key: https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+    validate_certs: yes
+  when: rabbitmq_repo_gpgcheck | bool
+
+- name: install rabbitmq repository
+  yum_repository:
+    name: rabbitmq
+    baseurl: "{{ rabbitmq_repo_url }}"
+    description: RabbitMQ yum repository
+    gpgcheck: "{{ rabbitmq_repo_gpgcheck }}"
+    enabled: "{{ rabbitmq_repo_enabled }}"

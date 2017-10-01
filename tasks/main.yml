@@ -23,4 +23,8 @@
 
 - name: configure postgresql upstream repo
   include: postgresql.yml
-  when: postgresql_upstream_repo_enable
+  when: postgresql_mirror_enabled
+
+- name: configure rabbitmq repo
+  include: rabbitmq.yml
+  when: rabbitmq_mirror_enabled
