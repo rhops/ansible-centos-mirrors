@@ -25,3 +25,9 @@ rabbitmq_mirror_enabled: no
 rabbitmq_repo_url: https://dl.bintray.com/rabbitmq/rabbitmq-server-rpm/
 rabbitmq_repo_enabled: yes
 rabbitmq_repo_gpgcheck: yes
+
+# InfluxData repo for TICK stack
+influxdata_mirror_enabled: no
+influxdata_repo_url: https://repos.influxdata.com/centos/7/x86_64/stable/
+influxdata_repo_enabled: yes
+influxdata_repo_gpgcheck: yes

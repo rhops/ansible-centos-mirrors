@@ -28,3 +28,7 @@
 - name: configure rabbitmq repo
   include: rabbitmq.yml
   when: rabbitmq_mirror_enabled
+
+- name: configure influxdata repo
+  include: influxdata.yml
+  when: influxdata_mirror_enabled

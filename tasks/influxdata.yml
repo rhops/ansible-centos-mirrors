@@ -1,0 +1,15 @@
+---
+- name: import influxdata repository key
+  rpm_key:
+    state: present
+    key: https://repos.influxdata.com/influxdb.key
+    validate_certs: yes
+  when: influxdata_repo_gpgcheck | bool
+
+- name: install influxdata repository
+  yum_repository:
+    name: influxdata
+    baseurl: "{{ influxdata_repo_url }}"
+    description: InfluxData yum repository
+    gpgcheck: "{{ influxdata_repo_gpgcheck }}"
+    enabled: "{{ influxdata_repo_enabled }}"
