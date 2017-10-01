@@ -20,3 +20,7 @@
 - name: configure pypi mirror
   include: pypi.yml
   when: pypi_mirror_enabled
+
+- name: configure postgresql upstream repo
+  include: postgresql.yml
+  when: postgresql_upstream_repo_enable

@@ -11,3 +11,11 @@ pypi_search_index: https://pypi.python.org/pypi
 pypi_timeout: 6000
 pypi_trusted_host: ""
 pypi_users: "{{ ansible_ssh_user }}"
+
+# PostgreSQL upstream repo
+postgresql_upstream_repo_enable: no
+postgresql_version: 9.6
+postgresql_short_version: 96
+postgresql_repo_host: https://download.postgresql.org/pub
+postgresql_repo_gpgcheck: yes
+postgresql_repo_enabled: yes
