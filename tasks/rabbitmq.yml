@@ -1,4 +1,7 @@
 ---
+# Current there is an issue to import the key.
+# See https://github.com/rabbitmq/rabbitmq-server-release/issues/53
+# Before the issue is resovled, the workaround is disabling gpgcheck
 - name: import rabbitmq key
   rpm_key:
     state: present

@@ -99,6 +99,8 @@ For example, in order to use grafana repo, `grafana_mirror_enabled: yes` has to 
 | rabbitmq_repo_enabled   | yes                                                 | Enable rabbitmq repo or not                |
 | rabbitmq_repo_gpgcheck  | yes                                                 | Apply gpg check during installation        |
 
+**N.B.** Current there is an issue to import the key. See  the [Issue](https://github.com/rabbitmq/rabbitmq-server-release/issues/53) in GitHub. Before the issue is resovled, the workaround is disabling gpgcheck by setting `rabbitmq_repo_gpgcheck: no`.
+
 #### InfluxData Variables
 
 | Name                      | Default Value                                        | Description                                  |
