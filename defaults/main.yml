@@ -30,3 +30,9 @@ influxdata_mirror_enabled: no
 influxdata_repo_url: https://repos.influxdata.com/centos/7/x86_64/stable/
 influxdata_repo_enabled: yes
 influxdata_repo_gpgcheck: yes
+
+# Grafana repo
+grafana_mirror_enabled: no
+grafana_repo_url: https://packagecloud.io/grafana/stable/el/$releasever/$basearch
+grafana_repo_enabled: yes
+grafana_repo_gpgcheck: yes

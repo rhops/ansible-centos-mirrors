@@ -1,0 +1,18 @@
+---
+- name: import grafana repository key
+  rpm_key:
+    state: present
+    key: "{{ item }}"
+    validate_certs: yes
+  with_items:
+    - https://packagecloud.io/grafana/stable/gpgkey
+    - https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana
+  when: grafana_repo_gpgcheck | bool
+
+- name: install grafana yum repository
+  yum_repository:
+    name: grafana
+    baseurl: "{{ grafana_repo_url }}"
+    description: grafana yum repository
+    gpgcheck: "{{ grafana_repo_gpgcheck }}"
+    enabled: "{{ grafana_repo_enabled }}"
