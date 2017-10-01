@@ -3,6 +3,9 @@
 centos_epel_mirror_enabled: no
 centos_base_mirror_enabled: no
 
+centos_base_host: http://mirror.centos.org/centos
+centos_epel_host: http://download.fedoraproject.org/pub
+
 # PyPI mirror
 pypi_mirror_enabled: no
 
