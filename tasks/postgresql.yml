@@ -2,14 +2,14 @@
 - name: import postgresql repository key
   rpm_key:
     state: present
-    key: "{{ postgresql_repo_host }}/repos/yum/RPM-GPG-KEY-PGDG-{{ postgresql_short_version }}"
+    key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-{{ postgresql_short_version }}"
     validate_certs: yes
   when: postgresql_repo_gpgcheck | bool
 
 - name: install postgresql repository
   yum_repository:
     name: postgresql
-    baseurl: "{{ postgresql_repo_host }}/repos/yum/{{ postgresql_version }}/redhat/rhel-{{ ansible_distribution_major_version }}-{{ ansible_architecture }}/"
+    baseurl: "{{ postgresql_repo_url }}"
     description: PostgreSQL upstream yum repository
     gpgcheck: "{{ postgresql_repo_gpgcheck }}"
     enabled: "{{ postgresql_repo_enabled }}"

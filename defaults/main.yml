@@ -14,9 +14,8 @@ pypi_users: "{{ ansible_ssh_user }}"
 
 # PostgreSQL upstream repo
 postgresql_mirror_enabled: no
-postgresql_version: 9.6
 postgresql_short_version: 96
-postgresql_repo_host: https://download.postgresql.org/pub
+postgresql_repo_url: https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64
 postgresql_repo_gpgcheck: yes
 postgresql_repo_enabled: yes
 
